@@ -388,7 +388,7 @@ function configure_nginx() {
   if [[ $compatible_nginx_conf == "yes" ]]; then
     wget -O ${domain}.conf https://raw.githubusercontent.com/wulabing/Xray_onekey/${github_branch}/config/web_compatible.conf
   elif [[ $compatible_nginx_conf == "no" ]]; then
-    wget -O ${domain}.conf https://raw.githubusercontent.com/wulabing/Xray_onekey/${github_branch}/config/web.conf
+    wget -O ${domain}.conf https://raw.githubusercontent.com/blooddark/Xray_onekey/patch-1/config/web.conf
   fi
   sed -i "s/xxx/${domain}/g" ${nginx_conf}
   modify_port
